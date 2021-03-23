@@ -7,5 +7,5 @@ before_install:
   - docker build -t mamoreo/frontend -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true mamoreo/frontend npm run test
+  - docker run -e CI=true mamoreo/frontend npm run test -- --coverage
 
